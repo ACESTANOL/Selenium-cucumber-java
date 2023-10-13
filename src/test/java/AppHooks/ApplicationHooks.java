@@ -25,7 +25,7 @@ public class ApplicationHooks {
 		prop = configReader.init_prop();
 		
 		
-	}
+	} 
 	
 	@Before(order = 1)
 	public void launchBrowser() {

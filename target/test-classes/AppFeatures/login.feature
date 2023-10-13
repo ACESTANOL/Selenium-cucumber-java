@@ -16,27 +16,28 @@
 #Sample Feature Definition Template
 #@tag
 Feature: Login Functionality
-
+	
   #Test Case 2: Login User with correct email and password
+  @SOLO
   Scenario: Successful login with valid credentials
     Given the user is on the login page
     When the user enters valid username "test02@yopmail.com"
     And the user enters valid password  "pass123456"
     And the user clicks the login button
 
-  #TEST CASE 3
+ 	#Test Case 3: Login User with incorrect email and password
   Scenario: Login User with incorrect email and password
     Given User is already on login page
     When Login using incorrect creadentials
     Then Error Your email or password is incorrect! should be displayed
-
-  #TEST CASE 4
+	
+	#Test Case 4: Logout User
   Scenario: Logout User
     Given User is already logged in
     When Logout user
     Then User should be navigated to login page
 
-  # TEST CASE 5
+	#Test Case 5: Register User with existing email
   Scenario: Register User with existing email
     Given User is in on Login page
     When Register already registered email
